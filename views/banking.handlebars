@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+    <script>
+        function showLogout() {
+            document.getElementById('logout').style.display = 'inline';
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Web Bank, <span onmouseover="showLogout()" id="username">{{username}}</span>!</h1>
+    <a href="/logout" id="logout" style="display:none;">Logout</a>
+    <form action="/banking" method="post">
+        <input type="text" name="accountNumber" placeholder="Account Number">
+        <label><input type="radio" name="action" value="balance"> Balance</label>
+        <label><input type="radio" name="action" value="deposit"> Deposit</label>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
